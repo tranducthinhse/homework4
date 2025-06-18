@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">homework4-Hà Tiến Dư-214801030107</string>
+    <string name="desc_tab_layout">Tab menu for switching between world leaders</string>
+    <string name="desc_view_pager">Swipeable pages showing world leader information</string>
+    <string name="desc_tab_layout_museums">Tab menu for switching between museum categories</string>
+    <string name="desc_view_pager_museums">Swipeable pages showing famous museum information</string>
+    <string name="desc_tab_layout_wonders">Tab menu for switching between the seven wonders</string>
+    <string name="desc_view_pager_wonders">Swipeable pages showing information about the seven wonders of the world</string>
+    <string name="tab_museum_description">Tabs for selecting famous museums</string>
+    <string name="tab_wonders_description">Tabs for selecting famous museums</string>
+    <string name="tab_leaders_description">Tabs for selecting famous museums</string>
+    <string name="tab_countries_description">Tabs for selecting famous museums</string>
+    <string name="flag">Country flag</string>
+</resources>
