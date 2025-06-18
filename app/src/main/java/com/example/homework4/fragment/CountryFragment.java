@@ -2,10 +2,13 @@ package com.example.homework4.fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -65,13 +68,70 @@ public class CountryFragment extends Fragment {
         TextView areaText = view.findViewById(R.id.area_text);
         TextView languageText = view.findViewById(R.id.language_text);
         ImageView flagImage = view.findViewById(R.id.flag_image);
+        ProgressBar loadingProgress = view.findViewById(R.id.loading_progress);
 
-        nameText.setText(name);
-        capitalText.setText("Capital: " + capital);
-        descriptionText.setText(description);
-        areaText.setText("Area: " + area);
-        languageText.setText("Language: " + language);
-        flagImage.setImageResource(flagResId);
+        // Ẩn tất cả thông tin ban đầu
+        flagImage.setAlpha(0f);
+        flagImage.setRotation(0f);
+        nameText.setAlpha(0f);
+        capitalText.setAlpha(0f);
+        descriptionText.setAlpha(0f);
+        areaText.setAlpha(0f);
+        languageText.setAlpha(0f);
+
+        // Hiện loading
+        loadingProgress.setVisibility(View.VISIBLE);
+
+        // Giả lập thời gian loading (2 giây)
+        new Handler(Looper.getMainLooper()).postDelayed(() -> {
+            // Kiểm tra fragment vẫn còn active
+            if (!isAdded() || getView() == null) return;
+
+            // Ẩn loading
+            loadingProgress.setVisibility(View.GONE);
+
+            // Set thông tin
+            nameText.setText(name);
+            capitalText.setText("Capital: " + capital);
+            descriptionText.setText(description);
+            areaText.setText("Area: " + area);
+            languageText.setText("Language: " + language);
+            flagImage.setImageResource(flagResId);
+
+            // Animation cho flag (xoay và hiện)
+            flagImage.animate()
+                    .rotationBy(360f)   // quay 1 vòng
+                    .alpha(1f)          // hiện dần lên
+                    .setDuration(1000)  // trong 1 giây
+                    .start();
+
+            // Animation cho thông tin (fade-in tuần tự) - sử dụng post để đảm bảo chạy tuần tự
+            view.post(() -> {
+                if (!isAdded()) return;
+                nameText.animate().alpha(1f).setDuration(600).start();
+            });
+
+            view.postDelayed(() -> {
+                if (!isAdded()) return;
+                capitalText.animate().alpha(1f).setDuration(600).start();
+            }, 300);
+
+            view.postDelayed(() -> {
+                if (!isAdded()) return;
+                areaText.animate().alpha(1f).setDuration(600).start();
+            }, 600);
+
+            view.postDelayed(() -> {
+                if (!isAdded()) return;
+                languageText.animate().alpha(1f).setDuration(600).start();
+            }, 900);
+
+            view.postDelayed(() -> {
+                if (!isAdded()) return;
+                descriptionText.animate().alpha(1f).setDuration(600).start();
+            }, 1200);
+
+        }, 2000); // Delay 2 giây
 
         return view;
     }

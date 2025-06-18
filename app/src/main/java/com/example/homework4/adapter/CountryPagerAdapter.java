@@ -23,7 +23,45 @@ public class CountryPagerAdapter extends FragmentStateAdapter {
                 return CountryFragment.newInstance(
                         "Russia",
                         "Russia",
-                        "The UK is an island nation in northwestern Europe.",
+                        "The UK is an island nation in northwestern Europe aihsbfgipqebgfiqerbgpqiergbperigbnewrpougnwerpiujgbnqrehjigbewriphgbwerpigbwertpigbwerogbnewrougbnwerognewrpigmwerpgmeaihsbfgipqebgfiqerbgpqiergbperigbnewrpougnwerpiujgbnqrehjigbewriphgbwerpigbwertpigbwerogbnewrougbnwerognewrpigmwerpgmewrpgmewr[pkgmwer[pgmewr[pkgmn[ewtrjognewtrhjipgbpewirgbewriogbpiewbn[owrjgfbnwetro[jnpogfjbonefipjbvnweougj[weewtrhhhwrthetryhetyjtreyjtryuklmk;ewgrbjml ewfbmkol;ewgrfbmkl; yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy<ImageView\n" +
+                                "            android:id=\"@+id/leader_image\"\n" +
+                                "            android:layout_width=\"match_parent\"\n" +
+                                "            android:layout_height=\"200dp\"\n" +
+                                "            android:layout_marginBottom=\"16dp\"\n" +
+                                "            android:background=\"@drawable/image_border\"\n" +
+                                "            android:scaleType=\"centerCrop\"\n" +
+                                "            tools:ignore=\"ContentDescription,ImageContrastCheck\" />\n" +
+                                "\n" +
+                                "        <!-- Leader Info -->\n" +
+                                "        <TextView\n" +
+                                "            android:id=\"@+id/name_text\"\n" +
+                                "            android:layout_width=\"match_parent\"\n" +
+                                "            android:layout_height=\"wrap_content\"\n" +
+                                "            android:textSize=\"20sp\"\n" +
+                                "            android:textStyle=\"bold\"\n" +
+                                "            android:gravity=\"center\"\n" +
+                                "            android:textColor=\"#333333\"\n" +
+                                "            android:layout_marginBottom=\"8dp\" />\n" +
+                                "\n" +
+                                "        <TextView\n" +
+                                "            android:id=\"@+id/position_text\"\n" +
+                                "            android:layout_width=\"match_parent\"\n" +
+                                "            android:layout_height=\"wrap_content\"\n" +
+                                "            android:textSize=\"16sp\"\n" +
+                                "            android:gravity=\"center\"\n" +
+                                "            android:textColor=\"#666666\"\n" +
+                                "            android:layout_marginBottom=\"16dp\" />\n" +
+                                "\n" +
+                                "        <TextView\n" +
+                                "            android:id=\"@+id/description_text\"\n" +
+                                "            android:layout_width=\"match_parent\"\n" +
+                                "            android:layout_height=\"wrap_content\"\n" +
+                                "            android:textSize=\"14sp\"\n" +
+                                "            android:textColor=\"#333333\"\n" +
+                                "            android:lineSpacingExtra=\"4dp\" />\n" +
+                                "\n" +
+                                "    </LinearLayout>\n" +
+                                "thêm loadingyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyygrehtjmnl;etrhyjmnopetrhjnopetryhjnoptrhye.",
                         R.drawable.rusia_flag,
                         "243,610 km²",
                         "English"

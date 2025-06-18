@@ -11,14 +11,27 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Flag Image -->
-        <ImageView
-            android:id="@+id/flag_image"
+        <!-- Container cho flag và loading -->
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginBottom="16dp"
-            android:scaleType="centerInside"
-            android:contentDescription="@string/flag" />
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/flag_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/flag" />
+
+            <ProgressBar
+                android:id="@+id/loading_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </FrameLayout>
 
         <!-- Country Name -->
         <TextView
